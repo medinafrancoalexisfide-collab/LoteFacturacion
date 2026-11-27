@@ -1,0 +1,12 @@
+# Normaliza los saltos de línea al guardar en el repositorio
+* text=auto
+
+# Estos archivos conservan CRLF en Windows
+*.ps1 text eol=crlf
+*.iss text eol=crlf
+
+# Binarios
+*.png binary
+*.jpg binary
+*.ico binary
+*.pfx binary

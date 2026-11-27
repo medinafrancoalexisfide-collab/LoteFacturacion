@@ -1,0 +1,41 @@
+# --- Visual Studio / .NET ---
+.vs/
+.vscode/
+.idea/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.rsuser
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.log
+
+# --- Secretos y datos: NUNCA subir ---
+*.pfx
+*.p12
+*.key
+*.pem
+*.csr
+*.crt
+settings.json
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+ta_*
+logs/
+Facturas/
+Diagnostico/
+*.pdf
+.env
+.env.*
+
+# --- Instalador ---
+publish/
+installer/salida/
+
+# --- Herramientas locales ---
+.claude/
