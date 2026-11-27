@@ -6,11 +6,33 @@ updates:
       - "/src/FacturacionLote"
       - "/tests/FacturacionLote.Tests"
     schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 5
+      interval: "monthly"
+      time: "09:00"
+      timezone: "America/Argentina/Buenos_Aires"
+    open-pull-requests-limit: 3
+    # Las actualizaciones menores y de parche llegan juntas en un solo PR.
+    groups:
+      nuget-menores:
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      # Los paquetes de Microsoft siguen la versión de .NET: el proyecto usa .NET 10,
+      # así que no se proponen saltos de versión mayor (por ejemplo a la 11).
+      - dependency-name: "Microsoft.*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "System.*"
+        update-types: ["version-update:semver-major"]
 
   # Versiones de las acciones usadas en .github/workflows
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+      time: "09:00"
+      timezone: "America/Argentina/Buenos_Aires"
+    # Todas las acciones juntas en un solo PR.
+    groups:
+      acciones:
+        patterns:
+          - "*"
