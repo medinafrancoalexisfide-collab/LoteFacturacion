@@ -3,7 +3,7 @@
   <!-- Ajustes comunes a todos los proyectos de la solución -->
   <PropertyGroup>
     <!-- Auditoría de seguridad de NuGet: avisa en cada restore si algún paquete (directo o transitivo)
-         tiene una vulnerabilidad conocida. En CI además se corre "dotnet list package --vulnerable". -->
+         tiene una vulnerabilidad conocida. En CI además se corre el comando dotnet list package con la opción vulnerable. -->
     <NuGetAudit>true</NuGetAudit>
     <NuGetAuditMode>all</NuGetAuditMode>
     <NuGetAuditLevel>low</NuGetAuditLevel>
